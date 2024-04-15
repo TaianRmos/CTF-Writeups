@@ -29,7 +29,3 @@ for mv in sequence_flag:
 
 
 turtle.exitonclick()
-
-
-
-# flag: FCSC{316834725604}
