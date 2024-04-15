@@ -13,6 +13,7 @@ I think the python file is quite self-explanatory, but let's break it down becau
 For every move, we start from the current position of the turtle, then add the move's `x` and `y` amount, multiplied by an amount of pixels (here 20), or else the turtle will move by 1 or 2 pixels each time and we won't be able to read the flag. On the `y` coordinates, we substract instead of adding because for some reasons the flag is upside down otherwise.
 
 And here's the result:
+
 ![](readme_images/image-2.png)
 
 And we can clearly read the flag: `FCSC{316834725604}`
