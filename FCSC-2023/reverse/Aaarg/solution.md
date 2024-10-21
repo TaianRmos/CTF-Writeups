@@ -4,7 +4,7 @@
 
 The file `aaarg` that we have to download doesn't have an extension, which means we probably have a **binary file** (makes sense in reverse engineering).
 
-*In Windows, by default it's gonna try to save the file in `.txt` so be careful to save it as a binary !*
+*In Windows, by default it'll try to save the file in `.txt` so be careful to save it as a binary !*
 
 
 We can simply verify what type of file we have using the command `file aaarg` and we get this output:
