@@ -96,26 +96,27 @@ Now that we understand that, the rest is going to be easy !
 ## How do we finally get the flag ?
 
 So first we check if we have at least 2 arguments (`if (1 < param_1)`), then we use the `strtoul` function which is going to convert a string to the long value.
-`strtoul` stands for "String to unsigned long", and without going to much into details, it's going to return the value of the number inside the string and store the rest.
+`strtoul` stands for "String to unsigned long", and without going into too much details, it's going to return the value of the number inside the string and store the rest.
 
-Example: if we do `strtoul` of the string `123abc`, `123` will be assigned to `uVar2` in base 10 (because of the last argument), and `abc` will be stored inside `&local_10`.
+Example: if we do `strtoul` of the string `"123abc"`, `123` will be assigned to `uVar2` in base 10 (because of the last argument), and `"abc"` will be stored inside `&local_10`. If we send a string only containing a number (like "123"), `&local_10` will be empty.
 
-In our case, we can see that we look at `param_2 + 8`. This is due to the decompilation again, but it is equivalent to looking at the second element of the array.
+In our case, we can see that we look at `param_2 + 8`. This is due to the decompilation again, but it is equivalent to looking at the second element of the array (we shift by 8 bytes).
 In other words, `param_2 + 8` will be equivalent to `param_2[1]`, `param_2 + 16` would be `param_2[2]` etc.
 
 We understand that we have to give at least one argument and it has to be a number that will be store in `uVar2`, but that's not enough !
 
 Finally, we do a double check:
-* `(*local_10 == '\0')` checks that we gave a number to the program and not a string (`*local_10` have to be empty)
+* `(*local_10 == '\0')` checks that we gave a number to the program and not a string containing letters (`*local_10` have to be empty)
 * `(uVar1 = 2, uVar2 == (long)-param_1))` assigns the value 2 to `uVar1` (not relevant) and checks that `uVar2` is equal to minus the amount of arguments we gave it.
 
-If you remember correctly, `uVar2` was the value of the second argument you gave, so it has to be minus the amount of the total argument you gave to the program.
+If you remember correctly, `uVar2` was the value of the second argument you gave, so it has to be minus the amount of the total amount of arguments you gave to the program.
+Here, `uVar1` seems to track where we went in the code, but it doesn't serve a purpose in the code.
 
 If you verify that condition, you enter the next step of the code which will simply go through some data and print it's content, the flag !
 
 In fact, you could have dumped the data and directly read the flag in memory but I decided to do it that way instead because I feel like it's the way the creator wanted us to do it.
 
-Some solution could then be:
+Some solutions could then be:
 * `./aaarg -2` (2 arguments, second one is -2)
 * `./aaarg -4 test test` (4 arguments, second one is -4)
 * etc
