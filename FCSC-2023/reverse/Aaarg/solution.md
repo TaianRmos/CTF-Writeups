@@ -15,7 +15,7 @@ The file is an "ELF 64-bit LSB executable" so it confirms that it's a executable
 
 ## What do we do from now ?
 
-Since it's just an intro challenge, we try some very simple things, like looking at the content of the file or printing the strings.
+Since it's just an intro challenge, we can try some very simple things, like looking at the content of the file or printing the strings.
 
 You can use commands like `cat` or `string` to accomplish that, but you'll see that we get nothing from it.
 
