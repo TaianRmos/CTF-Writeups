@@ -1,4 +1,4 @@
-# Solution to the challenge A l'envers
+# Solution to A l'envers
 
 This one is quite simple for the concept: look at the string you receive, reverse it and send it back !
 

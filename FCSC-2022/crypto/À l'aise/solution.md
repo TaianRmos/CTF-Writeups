@@ -1,4 +1,4 @@
-# Solution to the challenge À l'aise
+# Solution to À l'aise
 
 ## What is a Vigenere Cypher ?
 

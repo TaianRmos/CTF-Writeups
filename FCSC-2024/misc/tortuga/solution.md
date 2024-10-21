@@ -1,4 +1,4 @@
-# Solution to the challenge Tortuga
+# Solution to Tortuga
 
 I think the python file is quite self-explanatory, but let's break it down because why not:
 
