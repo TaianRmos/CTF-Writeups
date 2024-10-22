@@ -47,7 +47,7 @@ To facilitate the reading of the code, you can go in the list of functions, righ
 
 Now we can click on the `main` function and look at what it does:
 
-```
+```C
 undefined8 main(int param_1,long param_2)
 
 {
